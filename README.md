@@ -19,9 +19,9 @@ Offset          Hexadecimal                                      ASCII
 - Future features to come...
 
 ## Build & Run
-```bash
+```
 gcc hexdumptool.c -o hexdump
-./hexdump <filename>
+hexdump.exe <filename>
 ```
 ## What I learned
 Built this to get started in C and practice low-level file managment and pointer/byte manipulation
