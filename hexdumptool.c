@@ -4,7 +4,7 @@
 #include <ctype.h>  
 #include <stdbool.h>
 
-int main(){
+int main(int argc, char *argv[]){
     FILE *fptr;
     char dataOneLine[16];
     bool endReached = false;
@@ -13,9 +13,20 @@ int main(){
     int bytesCount=0;
     char asciistr[6]=("ASCII");
     char hexastr[12] = ("Hexadecimal");
+    
+
+    if (argc == 1)
+    {
+        printf("No file passed.\n");
+        return 1;
+    }
+    else if(argc >2){
+        printf("Only one file may be passed \n(no spaces between words, if you want to use a file with spaces in the name you must write the name between \"\").");
+        return 1;
+    }
 
     //randomfile.txt topuriaFucked.png
-    fptr = fopen("randomfile.txt", "rb");
+    fptr = fopen(argv[1], "rb");
     if(fptr ==NULL){
         printf("The file failed to open");
     }
