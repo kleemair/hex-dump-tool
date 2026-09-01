@@ -18,7 +18,11 @@ Offset          Hexadecimal                                      ASCII
 - Non-printable bytes are shown as `.` in the ASCII column
 - Future features to come...
 
-
+## Build & Run
+```bash
+gcc hexdumptool.c -o hexdump
+./hexdump <filename>
+```
 ## What I learned
 Built this to get started in C and practice low-level file managment and pointer/byte manipulation
 in C as part of learning C for reverse engineering. Notable bug I ran into and fixed: 
