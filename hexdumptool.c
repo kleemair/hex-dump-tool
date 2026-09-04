@@ -11,7 +11,6 @@ int main(int argc, char *argv[]){
     char dataOneLine[16];
     bool endReached = false;
     int memory = 1;
-    int ch;
     int filesize;
     int hexnum=0;
     int bytesCount=0;
@@ -88,7 +87,7 @@ int main(int argc, char *argv[]){
                         return 1;
                     }
                     offsetSearchfound = temp;
-                    offsetSearchfound[memory-2] = floor(i/16);  
+                    offsetSearchfound[memory-2] = (i/16)*16;  
                 } 
             }
         }
